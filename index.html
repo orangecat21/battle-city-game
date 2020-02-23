@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle City</title>
+</head>
+
+<body>
+    <script src="engine/Loader.js"></script>
+    <script>
+
+
+
+
+        const { Loader } = GameEngine;
+        const loader = new Loader;
+        loader.addImage('night', 'static/night.jpg');
+        loader.addJSON('persons', 'static/persons.json')
+        loader.load(() => {
+            console.log('Resources loaded');
+        });
+
+
+
+        // Loader.loadImage('static/night.jpg').then(result => {
+        //     document.body.append(result);
+        // });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -20,11 +20,17 @@ loader.addImage('night', 'static/night.jpg');
 loader.addJSON('persons', 'static/persons.json')
 loader.load(() => {
     sprite = new Sprite(loader.getImage('night'), {
-        scale:0.45,
+        scale:0.35,
+        anchorX: 0.5,
+        anchorY: 0.5,
+        rotation: Math.PI/4,
+        x:renderer.canvas.width/2,
+        y:renderer.canvas.height/2
     });
     const container = new Container;
     container.add(sprite);
     renderer.stage.add(container);
+    console.log(sprite);
 });
 
 document.body.appendChild(renderer.canvas);
